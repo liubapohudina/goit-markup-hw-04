@@ -80,7 +80,12 @@ header .container {
         
     }
     .nav .list .link {
-        padding: 24px 0;
+        padding: 24px 0; 
+    }
+    .nav .list .link:hover {
+        display: flex;
+        border-bottom: 2px solid var(--active-text-color);
+        gap: 20px;
     }
      .contacts  {
         display: flex;
@@ -128,7 +133,6 @@ header .container {
     .list .link:focus,
     .list .link:hover {
         color: var(--active-text-color);
-        
     }
     
     .contacts {
