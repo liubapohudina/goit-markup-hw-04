@@ -156,7 +156,7 @@ header .container {
 /*----------------------------------HERO-----------------------*/
 .section-hero {
     background-color: var(--backgroung-color-onesect);
-    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(/images/background-hero.jpg);
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/background-hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -307,6 +307,24 @@ text-align: center;
     padding: 32px 0;
 }
 
+
+/*-----------------------------------------SECTION CUSTOMERS--------------------*/
+
+.customers .title {
+    color: var(--backgroung-color-onesect);
+text-align: center;
+font-family: var(--primary-font);
+font-size: 36px;
+font-weight: 700;
+line-height: 1.1;
+letter-spacing: 0.02em;
+text-transform: capitalize;
+margin-bottom: 72px;
+}
+.customers {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 
 /*------------------------------------------FOOTER-------------------------*/
 
