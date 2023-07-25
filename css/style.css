@@ -80,15 +80,31 @@ header .container {
         
     }
     .nav .list .link {
-        padding: 24px 0; 
+        padding-top: 24px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0; 
+        display: flex;
+        gap: 20px;
+
     }
-    .nav .list .link:hover::after {
-        display: block;
+     .current {
+        color: var(--active-text-color);
+        flex-direction: column;
+        
+    }
+        
+    
+     .current::after {
         content: "";
-        border-radius: 2px;
-        border-bottom: var(--active-text-color.);
+        width: 100%;
+        height: 2px;
+        background-color: var(--active-text-color);
+    
        
     }
+      
+ 
      .contacts  {
         display: flex;
         align-items: center;
@@ -108,6 +124,7 @@ header .container {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .logo {
         font-family: "Raleway", sans-serif;
@@ -148,6 +165,7 @@ header .container {
         font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .contacts .list .link:focus,
     .contacts .list .link:hover {
@@ -197,6 +215,7 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 min-width: 169px;
 height: 56px;
 border: none;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .section-hero .button:hover,
 .section-hero .button:focus {
@@ -346,9 +365,13 @@ margin-bottom: 16px;
 width: 115px;
 display: inline-block;
 }
-.footer .container {
+.footer .footer-text {
     box-sizing: content-box;
     text-align: left;
+}
+.footer .container {
+    display: flex;
+    gap: 120px;
 }
 
 .footer .logo-studio-footer {
@@ -363,6 +386,16 @@ display: inline-block;
     width: 264px;
 }
 
+    
+.text {
+    color: var(--background-color-white);
+font-family: var(--primary-font);
+font-size: 16px;
+font-weight: 500;
+line-height: 1.5;
+letter-spacing: 0.02em;
+margin-bottom: 16px;
+}
 
 /*-------------------------------------PAGE PORTFOLIO--------------------*/
 
@@ -393,14 +426,14 @@ letter-spacing: 0.64px;
 border-radius: 4px;
 border: 1px solid var(--cornflower, #E7E9FC);
 padding: 12px 24px;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+ border 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list .button:focus,
 .list .button:hover {
     color: var(--color-text-onesect);
     background: var(--active-text-color);
-    text-align: center;
     border: 1px solid transparent;
-    border-radius: 4px;
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .section-portfolio .portfolio {
@@ -418,10 +451,11 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .section-portfolio .portfolio .item {
     flex-basis: calc((100% - 48px) / 3);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .section-portfolio .portfolio .item:hover {
     border: 1px solid var(--color-text-footer);
-background: var(--background-color-white);
+background-color: var(--background-color-white);
 box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
