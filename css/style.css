@@ -15,6 +15,7 @@ body {
     --color-text-onesect:  #FFFFFF;
     --color-text-footer: #F4F4FD;
     --cornflower: #E7E9FC;
+    --section-customers-icon: #8E8F99;
 }
 h1, h2, h3, h4, h5, h6, p {
 	margin-top: 0;
@@ -355,6 +356,25 @@ margin-bottom: 72px;
     padding-top: 120px;
     padding-bottom: 120px;
 }
+.customers .icon {
+    fill: var(--section-customers-icon);
+}
+.customers .icon-top {
+    border-radius: 4px;
+    border: 1px solid var(--section-customers-icon);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 88px;
+}
+.customers .list .item {
+    flex-basis: calc((100% - 120px) / 6);
+}
+.customers .list {
+    display: flex;
+    gap: 24px;
+}
+
 
 /*------------------------------------------FOOTER-------------------------*/
 
