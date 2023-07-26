@@ -11,6 +11,16 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     </head>
     <body class="main-page">
+        <div class="modal-window">
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <button data-modal-close type="button" class="modal-button">
+                        <svg class="item-modal" width="8" height="8">
+                            <use href="./images/close.svg#icon-close-black-18dp-2-1-1"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         <header class="header">
             <div class="container">
                 <nav class="nav">
@@ -38,7 +48,9 @@
                 <div class="container">
             <h1 class="page-title">Effective Solutions
             for Your Business</h1>
-            <button class="button" type="button">Order Service</button>
+            <button data-modal-open class="button" type="button">Order Service</button>
+        
+      
         </div>
             </section>
        
@@ -408,8 +420,8 @@
             </ul>
         </div>
         </div>
-   
 </section>
         </footer>
+        <script src="./js/modal.js"></script>
     </body>
 </html>
