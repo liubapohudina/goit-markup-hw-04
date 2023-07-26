@@ -252,6 +252,17 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 }
+.section-offer .icon-top {
+    border-radius: 4px;
+    background: var(--color-text-footer);
+    width: 100%;
+    height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
 
 /*----------------------------------------SECTION DOING--------------------------*/
 
