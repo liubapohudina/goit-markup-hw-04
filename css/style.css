@@ -605,7 +605,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cub
     color: var(--color-text-onesect);
     background: var(--active-text-color);
     border: 1px solid transparent;
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12); 
 }
 .section-portfolio .portfolio {
     display: flex;
@@ -620,14 +620,18 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     padding: 32px 16px;
     border-top: none;
 }
+.section-portfolio .item .link {
+    display: block;
+}
 .section-portfolio .portfolio .item {
     flex-basis: calc((100% - 48px) / 3);
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.section-portfolio .portfolio .item:hover {
+ .section-portfolio .portfolio .item:hover, 
+ .section-portfolio .portfolio .item:hover {
     border: 1px solid var(--color-text-footer);
 background-color: var(--background-color-white);
-box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); 
 }
 
 .section-portfolio .list .title {
@@ -648,19 +652,9 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 }
-.overlay {
-    background-color: var(--color-logo);
-    padding-top: 40px;
-    padding-bottom: 164px;
-    padding-left: 32px;
-    padding-right: 32px;
-    position: absolute;
-    top: 0;
-    left: 0;
-   width: 100%;
-   height: 100%;
-   transform: translateY(100%);
-   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.box-imag {
+   position: relative; 
+  overflow: hidden;
 }
 .text-overlay {
     color: var(--color-text-footer);
@@ -668,12 +662,19 @@ font-family: var(--primary-font);
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
+position: absolute;
+top: 0;
+left: 0;
+background-color: var(--color-logo);
+padding: 40px 32px;
+width: 100%;
+   height: 100%;
+   transform: translateY(100%);
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.box-imag {
-    position: relative;
-    overflow: hidden;
-}
-.section-portfolio .item:hover .overlay {
-    transform: translateX(0);
+
+.section-portfolio .item:hover .text-overlay,
+.section-portfolio .item:focus .text-overlay {
+    transform: translateY(0);
 }
 
